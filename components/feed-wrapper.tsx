@@ -16,10 +16,19 @@ export const FeedWrapper = ({ children }: Props) => {
     }, [children]);
 
     return (
-        <div className="flex-1 relative top-0 h-[calc(100vh-80px)]">
+        <div className="flex-1 relative top-0 h-[calc(100vh-70px)] lg:mt-[-20px]">
             <div ref={scrollRef} className="h-full overflow-y-auto">
-                <div className="flex flex-col-reverse">
-                    {children}
+                <div className="flex flex-col pt-6">
+                    {Array.isArray(children) ? (
+                        <>
+                            {children[0]}
+                            <div className="flex flex-col-reverse">
+                                {children.slice(1)}
+                            </div>
+                        </>
+                    ) : (
+                        children
+                    )}
                 </div>
             </div>
         </div>
