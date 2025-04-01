@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { InfinityIcon } from "lucide-react";
+import { courses } from "@/db/schema";
+
 type Props = {
-    activeCourse: { imageSrc: string; title: string };
+    activeCourse: typeof courses.$inferSelect;
     hearts: number;
     points: number;
     hasActiveSubscription: boolean;
@@ -18,7 +20,7 @@ export const UserProgress = ({
     return (
         <div className="flex items-center justify-between gap-x-2 w-full">
             <Link href="/courses" className="flex items-center gap-x-2">
-                <Button variant="ghost">
+                <Button variant="ghost" className="cursor-pointer">
                     <Image src={activeCourse.imageSrc} alt={activeCourse.title} width={32} height={32} className="rounded-md border" />
                 </Button>
             </Link>
