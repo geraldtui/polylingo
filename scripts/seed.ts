@@ -14,16 +14,21 @@ const main = async () => {
 
         await db.delete(schema.courses)
         await db.delete(schema.userProgress)
+        await db.delete(schema.challenges)
+        await db.delete(schema.challengeOptions)
+        await db.delete(schema.challengeProgress)
+        await db.delete(schema.units)
+        await db.delete(schema.lessons)
 
         await db.insert(schema.courses).values([
             {
                 id: 1,
-                title: "Samoan",
+                title: "Samoan - Fa'amatai",
                 imageSrc: "/ws.svg"
             },
             {
                 id: 2,
-                title: "Samoan - Fa'amatai",
+                title: "Samoan - Convos",
                 imageSrc: "/ws.svg"
             },
             {
@@ -42,6 +47,85 @@ const main = async () => {
                 imageSrc: "/nu.svg"
             },
         ])
+
+        await db.insert(schema.units).values([
+            {
+                id: 1,
+                title: "Unit 1",
+                description: "Formal pronouns",
+                courseId: 1,
+                order: 1,
+            },
+            {
+                id: 2,
+                title: "Unit 2",
+                description: "Formal greetings",
+                courseId: 1,
+                order: 2,
+            },
+        ])
+
+        await db.insert(schema.lessons).values([
+            {
+                id: 1,
+                title: "Lesson 1",
+                description: "High Chief",
+                unitId: 1,
+                order: 1,
+            },
+            {
+                id: 2,
+                title: "Lesson 2",
+                description: "Orator Chief",
+                unitId: 1,
+                order: 2,
+            },
+        ])
+
+        await db.insert(schema.challenges).values([
+            {
+                id: 1,
+                lessonId: 1,
+                type: "SELECT",
+                order: 1,
+                question: "What pronoun is used for a Matai Ali'i?",
+            },
+        ])
+
+        await db.insert(schema.challengeOptions).values([
+            {
+                id: 1,
+                challengeId: 1,
+                text: "Afioga",
+                correct: true,
+                audioSrc: "/ws_afioga.mp3",
+            },
+            {
+                id: 2,
+                challengeId: 1,
+                text: "Susuga",
+                correct: false,
+                audioSrc: "/ws_susuga.mp3",
+            },
+            {
+                id: 3,
+                challengeId: 1,
+                text: "Tofa",
+                correct: false,
+                audioSrc: "/ws_tofa.mp3",
+            },
+            {
+                id: 4,
+                challengeId: 1,
+                text: "Fetalaiga",
+                correct: false,
+                audioSrc: "/ws_fetalaiga.mp3",
+            },
+        ])
+
+
+
+
 
         console.log("Seeding finished.");
 
