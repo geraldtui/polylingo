@@ -52,7 +52,7 @@ const main = async () => {
             {
                 id: 1,
                 title: "Unit 1",
-                description: "Formal pronouns",
+                description: "Formal Greetings",
                 courseId: 1,
                 order: 1,
             }
@@ -62,9 +62,37 @@ const main = async () => {
             {
                 id: 1,
                 title: "Lesson 1",
-                description: "High Chief",
+                description: "Pronouns",
                 unitId: 1,
                 order: 1,
+            },
+            {
+                id: 2,
+                title: "Lesson 2",
+                description: "Upu Fa'aaloalo",
+                unitId: 1,
+                order: 2,
+            },
+            {
+                id: 3,
+                title: "Lesson 2",
+                description: "Upu Fa'aaloalo",
+                unitId: 1,
+                order: 3,
+            },
+            {
+                id: 4,
+                title: "Lesson 2",
+                description: "Upu Fa'aaloalo",
+                unitId: 1,
+                order: 4,
+            },
+            {
+                id: 5,
+                title: "Lesson 2",
+                description: "Upu Fa'aaloalo",
+                unitId: 1,
+                order: 5,
             }
         ])
 

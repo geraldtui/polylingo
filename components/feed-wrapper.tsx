@@ -9,11 +9,11 @@ type Props = {
 export const FeedWrapper = ({ children }: Props) => {
     const scrollRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-        }
-    }, [children]);
+    // useEffect(() => {
+    //     if (scrollRef.current) {
+    //         scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    //     }
+    // }, [children]);
 
     return (
         <div className="flex-1 relative top-0 h-[calc(100vh-70px)] lg:mt-[-20px]">
@@ -22,7 +22,7 @@ export const FeedWrapper = ({ children }: Props) => {
                     {Array.isArray(children) ? (
                         <>
                             {children[0]}
-                            <div className="flex flex-col-reverse">
+                            <div className="flex flex-col">
                                 {children.slice(1)}
                             </div>
                         </>
