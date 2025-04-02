@@ -55,14 +55,7 @@ const main = async () => {
                 description: "Formal pronouns",
                 courseId: 1,
                 order: 1,
-            },
-            {
-                id: 2,
-                title: "Unit 2",
-                description: "Formal greetings",
-                courseId: 1,
-                order: 2,
-            },
+            }
         ])
 
         await db.insert(schema.lessons).values([
@@ -72,14 +65,7 @@ const main = async () => {
                 description: "High Chief",
                 unitId: 1,
                 order: 1,
-            },
-            {
-                id: 2,
-                title: "Lesson 2",
-                description: "Orator Chief",
-                unitId: 1,
-                order: 2,
-            },
+            }
         ])
 
         await db.insert(schema.challenges).values([
