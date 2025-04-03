@@ -42,7 +42,7 @@ export const LessonButton = ({ id, index, totalCount, locked, current, percentag
     const isFirst = index === 0;
     const isLast = index === totalCount;
 
-    const isCompleted = !current && !locked;
+    const isCompleted = !current && !locked && percentage === 100;
 
     const Icon = isCompleted ? Check : isLast ? Crown : Star;
 
