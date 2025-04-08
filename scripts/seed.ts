@@ -113,6 +113,7 @@ const main = async () => {
                 text: "Afioga",
                 correct: true,
                 audioSrc: "/ws_afioga.mp3",
+                imageSrc: "/boy.svg",
             },
             {
                 id: 2,
@@ -120,6 +121,7 @@ const main = async () => {
                 text: "Susuga",
                 correct: false,
                 audioSrc: "/ws_susuga.mp3",
+                imageSrc: "/boy.svg",
             },
             {
                 id: 3,
@@ -127,6 +129,7 @@ const main = async () => {
                 text: "Tofa",
                 correct: false,
                 audioSrc: "/ws_tofa.mp3",
+                imageSrc: "/boy.svg",
             },
             {
                 id: 4,
@@ -134,6 +137,7 @@ const main = async () => {
                 text: "Fetalaiga",
                 correct: false,
                 audioSrc: "/ws_fetalaiga.mp3",
+                imageSrc: "/boy.svg",
             },
         ])
 
